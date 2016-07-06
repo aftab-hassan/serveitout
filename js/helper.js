@@ -49,17 +49,20 @@ function updateSelection(selectionmade)
         //playSound('../sounds/loadingshuffle',1);
         addTextHelper(0,playerSelection,-15,0,0,false,4,0.1,-Math.PI / 2,0xf0f8ff);
         console.log("playerSelection == "+playerSelection);
+
+        serveIndex = 2;
+        serveSelection = "first serve";
     }
 
-    /* serveSelection - First serve, Second serve */
-    else if(selectionmade == "serveSelection")
-    {
-        /* first serve, second serve, both serves Selection */
-        serveSelection=document.getElementById("serveselect");
-        serveIndex = serveSelection[serveSelection.selectedIndex].index;
-        serveSelection = serveSelection[serveSelection.selectedIndex].value;
-        console.log("serveSelection == "+serveSelection);
-    }
+    ///* serveSelection - First serve, Second serve */
+    //else if(selectionmade == "serveSelection")
+    //{
+    //    /* first serve, second serve, both serves Selection */
+    //    serveSelection=document.getElementById("serveselect");
+    //    serveIndex = serveSelection[serveSelection.selectedIndex].index;
+    //    serveSelection = serveSelection[serveSelection.selectedIndex].value;
+    //    console.log("serveIndex == "+serveIndex+", serveSelection == "+serveSelection);
+    //}
 
     /* court Position selection*/
     else
@@ -462,8 +465,8 @@ function init()
         document.getElementById("playerselect").disabled=true;
         document.getElementById("playerselect").style="background-color:#d3d3d3";
 
-        document.getElementById("serveselect").disabled=true;
-        document.getElementById("serveselect").style="background-color:#d3d3d3";
+        //document.getElementById("serveselect").disabled=true;
+        //document.getElementById("serveselect").style="background-color:#d3d3d3";
 
         //console.log("count=="+getCount())
         setCount(parseInt(getCount())+1);
